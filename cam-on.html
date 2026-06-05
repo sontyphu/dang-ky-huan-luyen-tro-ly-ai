@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoàn tất thanh toán — Lớp Huấn luyện Trợ lý AI cá nhân</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --dau:#03377d; --cuoi:#0091c6; --nhan:#f1c232; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ font-family:'Montserrat',sans-serif; color:#1f2937; background:#eef3f8; line-height:1.6; }
+  .hero{ background:linear-gradient(135deg,var(--dau),var(--cuoi)); color:#fff;
+         padding:40px 20px 110px; text-align:center; }
+  .hero h1{ font-size:1.6rem; font-weight:800; margin-bottom:8px; }
+  .hero p{ opacity:.95; max-width:560px; margin:0 auto; }
+  .wrap{ max-width:560px; margin:-80px auto 40px; padding:0 16px; }
+  .card{ background:#fff; border-radius:18px; box-shadow:0 18px 50px rgba(3,55,125,.18);
+         padding:28px 24px; }
+  .step{ font-size:.82rem; font-weight:700; color:var(--cuoi); text-transform:uppercase; letter-spacing:.5px; }
+  h2{ font-size:1.2rem; color:var(--dau); margin:4px 0 16px; }
+  .qr{ text-align:center; margin:10px 0 18px; }
+  .qr img{ width:230px; height:230px; border:6px solid #f1f5f9; border-radius:14px; }
+  .qr .cap{ font-size:.8rem; color:#6b7280; margin-top:6px; }
+  table{ width:100%; border-collapse:collapse; font-size:.95rem; }
+  td{ padding:9px 4px; border-bottom:1px solid #eef2f7; vertical-align:top; }
+  td.k{ color:#6b7280; width:42%; }
+  td.v{ font-weight:600; text-align:right; }
+  td.v b{ color:var(--dau); }
+  .copy{ cursor:pointer; color:var(--cuoi); font-size:.78rem; font-weight:600; margin-left:6px; white-space:nowrap; }
+  .amount{ color:#dc2626; }
+  .note{ background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:12px 14px;
+         font-size:.88rem; color:#92400e; margin:18px 0; }
+  .btn{ width:100%; margin-top:8px; padding:16px; border:none; border-radius:12px; cursor:pointer;
+        background:linear-gradient(135deg,#16a34a,#15803d); color:#fff;
+        font-family:inherit; font-size:1.08rem; font-weight:700;
+        box-shadow:0 8px 22px rgba(22,163,74,.3); transition:.15s; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn:disabled{ opacity:.6; cursor:not-allowed; transform:none; }
+  .done{ display:none; text-align:center; padding:10px 0 4px; }
+  .done .ic{ font-size:3rem; }
+  .done h3{ color:#15803d; font-size:1.25rem; margin:6px 0; }
+  .done p{ font-size:.95rem; color:#374151; }
+  .small{ text-align:center; font-size:.8rem; color:#9ca3af; margin-top:14px; }
+  footer{ text-align:center; color:#9ca3af; font-size:.8rem; padding:24px; }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🎉 Cảm ơn bạn đã đăng ký!</h1>
+    <p>Chỉ còn 1 bước cuối: chuyển khoản học phí để giữ chỗ lớp khai giảng <b id="kg">…</b>.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="card" id="payCard">
+      <div class="step">Bước cuối</div>
+      <h2>Chuyển khoản học phí</h2>
+
+      <div class="qr">
+        <img id="qr" alt="Mã QR chuyển khoản">
+        <div class="cap">Mở app ngân hàng → quét mã QR (đã điền sẵn số tiền + nội dung)</div>
+      </div>
+
+      <table>
+        <tr><td class="k">Ngân hàng</td><td class="v" id="nh">…</td></tr>
+        <tr><td class="k">Số tài khoản</td><td class="v"><span id="stk">…</span><span class="copy" onclick="cp(CFG.SO_TK,this)">Sao chép</span></td></tr>
+        <tr><td class="k">Chủ tài khoản</td><td class="v" id="ten">…</td></tr>
+        <tr><td class="k">Số tiền</td><td class="v"><b class="amount" id="tien">…</b></td></tr>
+        <tr><td class="k">Nội dung CK</td><td class="v"><span id="ndck">…</span><span class="copy" onclick="cp(document.getElementById('ndck').textContent,this)">Sao chép</span></td></tr>
+      </table>
+
+      <div class="note">
+        ⚠️ Vui lòng ghi <b>đúng nội dung chuyển khoản</b> ở trên để chúng tôi đối soát nhanh. Chuyển khoản xong, bấm nút bên dưới.
+      </div>
+
+      <button class="btn" id="btnDone">✅ TÔI ĐÃ CHUYỂN KHOẢN XONG</button>
+      <div class="small">Mã đơn của bạn: <b id="madon">…</b></div>
+    </div>
+
+    <div class="card done" id="doneCard" style="display:none;">
+      <div class="ic">✅</div>
+      <h3>Đã ghi nhận!</h3>
+      <p>Cảm ơn bạn. Nhân viên của chúng tôi sẽ <b>xác minh chuyển khoản</b> và liên hệ với bạn qua điện thoại/Zalo để <b>đưa vào nhóm kín và gửi toàn bộ quà tặng</b>. Hẹn gặp bạn ở buổi khai giảng!</p>
+      <p class="small" id="hot"></p>
+    </div>
+  </div>
+
+  <footer>© Huấn luyện Trợ lý AI cá nhân — Lê Thanh Sơn</footer>
+
+<script src="config.js"></script>
+<script>
+  const CFG = window.CONFIG;
+  const p = new URLSearchParams(location.search);
+  const ma_don = p.get('ma_don') || '';
+  const ho_ten = p.get('ho_ten') || '';
+  const email  = p.get('email')  || '';
+  const sdt    = p.get('sdt')    || '';
+
+  // đổ dữ liệu
+  document.getElementById('kg').textContent = CFG.KHAI_GIANG;
+  document.getElementById('nh').textContent = CFG.NH_TEN;
+  document.getElementById('stk').textContent = CFG.SO_TK;
+  document.getElementById('ten').textContent = CFG.TEN_TK;
+  document.getElementById('tien').textContent = CFG.GIA_HIEN_THI;
+  document.getElementById('ndck').textContent = ma_don;
+  document.getElementById('madon').textContent = ma_don;
+  if(CFG.HOTLINE){ document.getElementById('hot').textContent = 'Cần hỗ trợ gấp? Gọi/Zalo: ' + CFG.HOTLINE; }
+
+  // mã QR: ưu tiên ảnh tĩnh anh tải lên (CFG.QR_ANH); nếu trống thì tạo QR động có sẵn số tiền + nội dung
+  let qrUrl;
+  if (CFG.QR_ANH && CFG.QR_ANH.trim()){
+    qrUrl = CFG.QR_ANH.trim();
+  } else {
+    qrUrl = 'https://img.vietqr.io/image/' + CFG.NH_BIN + '-' + CFG.SO_TK + '-compact2.png'
+      + '?amount=' + CFG.GIA
+      + '&addInfo=' + encodeURIComponent(ma_don)
+      + '&accountName=' + encodeURIComponent(CFG.TEN_TK);
+  }
+  document.getElementById('qr').src = qrUrl;
+
+  function cp(text, el){
+    navigator.clipboard.writeText(text).then(()=>{ const t=el.textContent; el.textContent='Đã chép!'; setTimeout(()=>el.textContent=t,1500); });
+  }
+
+  document.getElementById('btnDone').addEventListener('click', async function(){
+    const btn = this; btn.disabled = true; btn.textContent = 'Đang gửi…';
+    const payload = {
+      event: "da_chuyen_khoan",
+      ma_don, khoa: CFG.TEN_KHOA,
+      ho_ten, email, sdt,
+      so_tien: CFG.GIA,
+      thoi_gian: new Date().toISOString()
+    };
+    try{
+      await fetch(CFG.WEBHOOK, {
+        method:'POST', mode:'no-cors',
+        headers:{'Content-Type':'text/plain;charset=utf-8'},
+        body: JSON.stringify(payload)
+      });
+    }catch(err){ /* no-cors */ }
+    document.getElementById('payCard').style.display='none';
+    document.getElementById('doneCard').style.display='block';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+</script>
+</body>
+</html>

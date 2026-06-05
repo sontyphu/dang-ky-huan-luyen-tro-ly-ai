@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Huấn Luyện Trợ Lý AI Cá Nhân - Lê Thanh Sơn</title>
+<meta name="description" content="3 buổi thực chiến: tự tay dựng một trợ lý AI riêng hiểu bạn, làm thay việc lặp mỗi ngày - dù chưa biết gì về công nghệ. Học phí 1.868.000đ." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Huấn Luyện Trợ Lý AI Cá Nhân - học xong dựng được trợ lý riêng" />
+<meta property="og:description" content="Biến ChatGPT từ công cụ hỏi-đáp vặt thành trợ lý riêng của bạn. 3 buổi, học online, từ con số 0." />
+<meta property="og:type" content="website" />
+
+<!--
+  ============================================================
+  GHI CHÚ CHO ANH SƠN - CÁC CHỖ CẦN ĐIỀN TRƯỚC KHI ĐĂNG:
+  1. [LINK ĐĂNG KÝ]  - thay href="#dangky" của các nút thành link Edubit/SaleKit thật (tìm: href="#dangky").
+  2. [LOGO]          - đang dùng chữ "LÊ THANH SƠN" + dấu sao vàng. Có file logo thì thay khối .brand-mark.
+  3. [ẢNH CHUYÊN GIA]- ô tròn "LTS" trong mục Giảng viên → thay bằng ảnh thật của anh.
+  4. [GIÁ TRỊ QUÀ]   - các thẻ [giá trị ____đ] trong mục Học phí → điền số thật.
+  5. [HẠN QUÀ]       - [ngày/tháng/năm] ở mục ưu đãi & CTA cuối.
+  6. [TESTIMONIAL]   - 3 thẻ cảm nhận đang để mẫu → thay feedback thật (tên, ảnh, nghề, con số).
+  7. [HOTLINE/ZALO]  - chân trang.
+  Màu & font đã đồng bộ slide khóa (navy + vàng gold + Be Vietnam Pro).
+  ============================================================
+-->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+
+
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.inset-x-0{left:0;right:0}.-top-20{top:-5rem}.-top-24{top:-6rem}.bottom-0{bottom:0}.left-1\/2{left:50%}.top-0{top:0}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.ml-2{margin-left:.5rem}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-11{height:2.75rem}.h-12{height:3rem}.h-16{height:4rem}.h-2{height:.5rem}.h-24{height:6rem}.h-3{height:.75rem}.h-4{height:1rem}.h-44{height:11rem}.h-\[420px\]{height:420px}.h-\[680px\]{height:680px}.h-full{height:100%}.w-11{width:2.75rem}.w-12{width:3rem}.w-16{width:4rem}.w-2{width:.5rem}.w-3{width:.75rem}.w-44{width:11rem}.w-\[420px\]{width:420px}.w-\[680px\]{width:680px}.w-full{width:100%}.w-px{width:1px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[80\%\]{max-width:80%}.max-w-\[88\%\]{max-width:88%}.max-w-md{max-width:28rem}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize{resize:both}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-x-7{-moz-column-gap:1.75rem;column-gap:1.75rem}.gap-y-3{row-gap:.75rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-tl-sm{border-top-left-radius:.125rem}.rounded-tr-sm{border-top-right-radius:.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-cyanx\/30{border-color:rgba(70,194,245,.3)}.border-glow\/30{border-color:rgba(30,91,214,.3)}.border-glow\/40{border-color:rgba(30,91,214,.4)}.border-gold\/25{border-color:rgba(255,196,46,.25)}.border-gold\/30{border-color:rgba(255,196,46,.3)}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.bg-cyanx\/5{background-color:rgba(70,194,245,.05)}.bg-glow\/20{background-color:rgba(30,91,214,.2)}.bg-glow\/30{background-color:rgba(30,91,214,.3)}.bg-gold{--tw-bg-opacity:1;background-color:rgb(255 196 46/var(--tw-bg-opacity,1))}.bg-gold\/10{background-color:rgba(255,196,46,.1)}.bg-gold\/15{background-color:rgba(255,196,46,.15)}.bg-green-400\/80{background-color:rgba(74,222,128,.8)}.bg-navy-800{--tw-bg-opacity:1;background-color:rgb(10 42 107/var(--tw-bg-opacity,1))}.bg-navy-900\/90{background-color:rgba(6,22,60,.9)}.bg-red-400{--tw-bg-opacity:1;background-color:rgb(248 113 113/var(--tw-bg-opacity,1))}.bg-red-400\/80{background-color:hsla(0,91%,71%,.8)}.bg-white\/15{background-color:hsla(0,0%,100%,.15)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-yellow-400\/80{background-color:rgba(250,204,21,.8)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.from-glow\/40{--tw-gradient-from:rgba(30,91,214,.4) var(--tw-gradient-from-position);--tw-gradient-to:rgba(30,91,214,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-cyanx\/10{--tw-gradient-to:rgba(70,194,245,.1) var(--tw-gradient-to-position)}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-20{padding-bottom:5rem}.pb-3{padding-bottom:.75rem}.pt-28{padding-top:7rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.08\]{line-height:1.08}.leading-none{line-height:1}.leading-tight{line-height:1.25}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.text-blue-100\/50{color:rgba(219,234,254,.5)}.text-blue-100\/55{color:rgba(219,234,254,.55)}.text-blue-100\/60{color:rgba(219,234,254,.6)}.text-blue-100\/65{color:rgba(219,234,254,.65)}.text-blue-100\/70{color:rgba(219,234,254,.7)}.text-blue-100\/75{color:rgba(219,234,254,.75)}.text-blue-100\/80{color:rgba(219,234,254,.8)}.text-blue-100\/85{color:rgba(219,234,254,.85)}.text-blue-100\/90{color:rgba(219,234,254,.9)}.text-blue-50{--tw-text-opacity:1;color:rgb(239 246 255/var(--tw-text-opacity,1))}.text-cyanx\/80{color:rgba(70,194,245,.8)}.text-cyanx\/90{color:rgba(70,194,245,.9)}.text-gold{--tw-text-opacity:1;color:rgb(255 196 46/var(--tw-text-opacity,1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165/var(--tw-text-opacity,1))}.text-red-300\/90{color:hsla(0,94%,82%,.9)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/90{color:hsla(0,0%,100%,.9)}.blur{--tw-blur:blur(8px)}.blur,.blur-xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-xl{--tw-blur:blur(24px)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.drop-shadow,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}@media (min-width:640px){.sm\:block{display:block}.sm\:inline-flex{display:inline-flex}.sm\:hidden{display:none}.sm\:h-32{height:8rem}.sm\:h-52{height:13rem}.sm\:w-52{width:13rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:p-12{padding:3rem}.sm\:p-6{padding:1.5rem}.sm\:p-7{padding:1.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pb-28{padding-bottom:7rem}.sm\:pt-32{padding-top:8rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:col-span-3{grid-column:span 3/span 3}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:mx-0{margin-left:0;margin-right:0}.lg\:flex{display:flex}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:justify-start{justify-content:flex-start}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-left{text-align:left}.lg\:text-\[3\.4rem\]{font-size:3.4rem}}</style>
+  <style>
+  html { scroll-behavior: smooth; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  *, *::before, *::after { min-width: 0; }
+  img { max-width: 100%; height: auto; }
+  @media (max-width: 639px){ body { padding-bottom: 80px; } }
+  body {
+    font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #E7EDFB;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #14377F 0%, rgba(20,55,127,0) 60%),
+      radial-gradient(900px 500px at 85% 12%, rgba(70,194,245,0.18) 0%, rgba(70,194,245,0) 55%),
+      linear-gradient(180deg, #07184A 0%, #061539 38%, #050F2E 100%);
+    background-attachment: fixed;
+  }
+  h1,h2,h3,h4,h5 { font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+
+  .text-gold-grad {
+    background: linear-gradient(180deg,#FFE588 0%,#FFC42E 48%,#E89A12 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 2px 12px rgba(255,196,46,0.30));
+  }
+  .btn-gold {
+    background: linear-gradient(180deg,#FFD95A 0%,#F2B312 100%);
+    color: #06163C;
+    box-shadow: 0 12px 34px -10px rgba(255,196,46,0.65), inset 0 1px 0 rgba(255,255,255,0.4);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  }
+  .btn-gold:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 18px 42px -10px rgba(255,196,46,0.8); }
+  .btn-ghost {
+    border: 1px solid rgba(120,170,255,0.45);
+    background: rgba(255,255,255,0.03);
+    transition: all .18s ease;
+  }
+  .btn-ghost:hover { background: rgba(70,194,245,0.12); border-color: #46C2F5; }
+
+  .glass {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(120,170,255,0.16);
+    backdrop-filter: blur(8px);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .glass:hover {
+    transform: translateY(-4px);
+    border-color: rgba(70,194,245,0.55);
+    box-shadow: 0 18px 40px -18px rgba(30,91,214,0.7);
+  }
+  .dotgrid {
+    background-image: radial-gradient(rgba(120,170,255,0.13) 1px, transparent 1.4px);
+    background-size: 24px 24px;
+  }
+  .kicker {
+    letter-spacing: .22em;
+    color: #8FB4FF;
+  }
+  .glow-ring { box-shadow: 0 0 0 1px rgba(70,194,245,.25), 0 0 50px -12px rgba(30,91,214,.8); }
+
+  #heroCanvas { position:absolute; inset:0; width:100%; height:100%; z-index:0; opacity:.9; pointer-events:none; }
+
+  .reveal { opacity:0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-in { opacity:1; transform: none; }
+
+  .nav-solid { background: rgba(6,18,52,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(120,170,255,0.14); }
+
+  details.faq > summary { list-style: none; cursor: pointer; }
+  details.faq > summary::-webkit-details-marker { display:none; }
+  details.faq[open] .faq-plus { transform: rotate(45deg); }
+  .faq-plus { transition: transform .2s ease; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { transition: none; opacity:1; transform:none; }
+    #heroCanvas { display:none; }
+  }
+</style>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+
+<body class="overflow-x-hidden">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#top" class="brand-mark flex items-center gap-2">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" class="shrink-0">
+          <path d="M12 2l2.4 6.2L21 10l-6.6 1.8L12 18l-2.4-6.2L3 10l6.6-1.8L12 2z" fill="#FFC42E"/>
+        </svg>
+        <span class="font-extrabold tracking-wide text-white text-lg leading-none">LÊ THANH SƠN<span class="block text-[10px] font-medium tracking-[0.2em] text-cyanx/80">ĐÀO TẠO AI THỰC CHIẾN</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-blue-100/80">
+        <a href="#noidung" class="hover:text-white transition">Học gì</a>
+        <a href="#lotrinh" class="hover:text-white transition">3 buổi</a>
+        <a href="#loiich" class="hover:text-white transition">Lợi ích</a>
+        <a href="#hocphi" class="hover:text-white transition">Học phí</a>
+        <a href="#faq" class="hover:text-white transition">Hỏi đáp</a>
+      </div>
+      <a href="#dangky" class="btn-gold hidden sm:inline-flex items-center rounded-xl px-5 py-2.5 text-sm font-extrabold">Đăng ký ngay</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header id="top" class="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28">
+  <canvas id="heroCanvas"></canvas>
+  <!-- glow blobs -->
+  <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[680px] h-[680px] rounded-full" style="background:radial-gradient(circle, rgba(70,194,245,0.18), rgba(70,194,245,0) 60%)"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 text-center lg:text-left">
+        <span class="inline-flex items-center gap-2 rounded-full border border-cyanx/30 bg-cyanx/5 px-4 py-1.5 text-xs font-semibold kicker uppercase">Khóa nền · Học online · 3 buổi</span>
+        <h1 class="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] font-black leading-[1.08] text-white uppercase tracking-tight">
+          Biến ChatGPT thành<br class="hidden sm:block"/> <span class="text-gold-grad">trợ lý riêng</span> của bạn
+        </h1>
+        <p class="mt-5 text-lg sm:text-xl text-blue-100/85 max-w-2xl mx-auto lg:mx-0">
+          3 buổi thực chiến, cầm tay chỉ việc: tự tay dựng một trợ lý AI hiểu rõ bạn, làm thay những việc lặp đi lặp lại mỗi ngày - <span class="text-white font-semibold">dù chưa từng biết một dòng kỹ thuật nào.</span>
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="#dangky" class="btn-gold inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-base sm:text-lg font-extrabold">
+            ĐĂNG KÝ NGAY - 1.868.000đ
+          </a>
+          <a href="#noidung" class="btn-ghost inline-flex items-center justify-center rounded-xl px-7 py-4 text-base font-semibold text-white">
+            Xem khóa học có gì
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-7 gap-y-3 text-sm text-blue-100/75">
+          <span class="inline-flex items-center gap-2"><span class="text-gold font-extrabold text-base">8</span> năm trong nghề</span>
+          <span class="h-4 w-px bg-white/15"></span>
+          <span class="inline-flex items-center gap-2"><span class="text-gold font-extrabold text-base">Hàng ngàn</span> học viên</span>
+          <span class="h-4 w-px bg-white/15"></span>
+          <span class="inline-flex items-center gap-2"><span class="text-gold font-extrabold text-base">Hàng trăm</span> doanh nghiệp</span>
+        </div>
+      </div>
+
+      <!-- hero visual: mock trợ lý -->
+      <div class="lg:col-span-5">
+        <div class="glass glow-ring rounded-2xl p-5 sm:p-6 max-w-md mx-auto">
+          <div class="flex items-center gap-2 pb-3 border-b border-white/10">
+            <span class="h-3 w-3 rounded-full bg-red-400/80"></span>
+            <span class="h-3 w-3 rounded-full bg-yellow-400/80"></span>
+            <span class="h-3 w-3 rounded-full bg-green-400/80"></span>
+            <span class="ml-2 text-xs text-blue-100/60">Trợ lý AI của bạn</span>
+          </div>
+          <div class="mt-4 space-y-3 text-sm">
+            <div class="ml-auto max-w-[80%] rounded-2xl rounded-tr-sm bg-glow/30 border border-glow/40 px-4 py-2.5 text-blue-50">
+              Viết giúp mình bài đăng giới thiệu sản phẩm mới, đúng giọng shop.
+            </div>
+            <div class="max-w-[88%] rounded-2xl rounded-tl-sm bg-white/5 border border-white/10 px-4 py-2.5 text-blue-100/90">
+              Rồi! Đây là bản nháp đúng giọng shop mình, kèm 3 tiêu đề để bạn chọn…
+              <span class="mt-2 block text-cyanx/80 text-xs">⌁ tạo trong 6 giây</span>
+            </div>
+          </div>
+          <div class="mt-5 grid grid-cols-3 gap-2 text-center">
+            <div class="rounded-lg bg-white/5 border border-white/10 py-2">
+              <div class="text-gold font-extrabold text-lg leading-none">3</div>
+              <div class="text-[11px] text-blue-100/60 mt-1">buổi học</div>
+            </div>
+            <div class="rounded-lg bg-white/5 border border-white/10 py-2">
+              <div class="text-gold font-extrabold text-lg leading-none">≥1</div>
+              <div class="text-[11px] text-blue-100/60 mt-1">trợ lý dựng được</div>
+            </div>
+            <div class="rounded-lg bg-white/5 border border-white/10 py-2">
+              <div class="text-gold font-extrabold text-lg leading-none">0</div>
+              <div class="text-[11px] text-blue-100/60 mt-1">dòng kỹ thuật</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- digital wave -->
+  <svg class="absolute bottom-0 inset-x-0 w-full h-24 sm:h-32 z-0" viewBox="0 0 1440 160" preserveAspectRatio="none" fill="none">
+    <path d="M0 90 Q 240 30 480 80 T 960 70 T 1440 60 V160 H0 Z" fill="rgba(30,91,214,0.18)"/>
+    <path d="M0 110 Q 280 60 560 100 T 1120 95 T 1440 90 V160 H0 Z" fill="rgba(70,194,245,0.10)"/>
+  </svg>
+</header>
+
+<!-- ===================== PAIN ===================== -->
+<section class="relative py-20 dotgrid">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white uppercase leading-tight">
+        Bạn mở ChatGPT mỗi ngày - nhưng nó vẫn <span class="text-gold-grad">chưa phải trợ lý của bạn</span>
+      </h2>
+      <p class="mt-4 text-blue-100/75 text-lg">Nếu những điều dưới đây nghe quen, không phải bạn kém - bạn chỉ đang dùng AI như một cái máy tra cứu.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-11 w-11 rounded-xl bg-glow/20 border border-glow/30 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#46C2F5" stroke-width="2"><path d="M3 12a9 9 0 109-9" stroke-linecap="round"/><path d="M3 3v6h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Ngày nào cũng gõ lại từ đầu</h3>
+        <p class="text-sm text-blue-100/70">Hôm sau quay lại, nó “quên” bạn là ai, bán gì, viết giọng nào - lại giải thích lại từ đầu.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-11 w-11 rounded-xl bg-glow/20 border border-glow/30 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#46C2F5" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Kết quả nhạt, chung chung</h3>
+        <p class="text-sm text-blue-100/70">Nó trả ra một đoạn nghe xuôi tai mà dùng không được, rồi bạn ngồi sửa tới sửa lui mất cả buổi.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-11 w-11 rounded-xl bg-glow/20 border border-glow/30 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#46C2F5" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Ngập trong việc lặp</h3>
+        <p class="text-sm text-blue-100/70">Trả lời những tin nhắn giống nhau, nặn từng bài đăng, soạn lại nội dung gần y hệt tháng trước.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-11 w-11 rounded-xl bg-glow/20 border border-glow/30 flex items-center justify-center mb-4">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#46C2F5" stroke-width="2"><path d="M12 3l9 16H3l9-16z" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">“Hay tại mình không hợp công nghệ?”</h3>
+        <p class="text-sm text-blue-100/70">Rồi bạn lặng lẽ gấp máy, quay về làm tay - chậm hơn, mệt hơn, thấy mình tụt lại mỗi tháng.</p>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center text-lg text-white/90 reveal max-w-3xl mx-auto">
+      Tin tốt: khoảng cách đó đóng lại <span class="text-gold-grad font-bold">nhanh hơn bạn tưởng rất nhiều</span> - nếu có người cầm tay chỉ đúng từng bước.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== AUTHORITY ===================== -->
+<section class="relative py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass rounded-3xl p-7 sm:p-10 reveal">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-4">
+          <!-- [ẢNH CHUYÊN GIA] -->
+          <div class="relative mx-auto w-44 h-44 sm:w-52 sm:h-52">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-glow/40 to-cyanx/10 blur-xl"></div>
+            <div class="relative w-full h-full rounded-2xl bg-navy-800 border border-cyanx/30 flex items-center justify-center">
+              <span class="text-5xl font-black text-gold-grad">LTS</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-8">
+          <span class="kicker text-xs font-semibold uppercase">Người đồng hành cùng bạn</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-white">Lê Thanh Sơn - chuyên gia &amp; diễn giả đào tạo AI thực chiến</h2>
+          <p class="mt-4 text-blue-100/80">
+            Suốt <span class="text-white font-semibold">8 năm</span> làm marketing trên môi trường mạng, tôi đã đồng hành cùng <span class="text-white font-semibold">hàng ngàn học viên</span> và <span class="text-white font-semibold">hàng trăm doanh nghiệp</span> - từ người bán hàng online một mình tới các công ty đã có đội ngũ. Khi AI xuất hiện, tôi lao vào đưa nó vào tận việc thật: viết nội dung, trả lời khách, soạn tài liệu, xử lý những việc lặp ngốn thời gian nhất.
+          </p>
+          <p class="mt-3 text-blue-100/80">
+            Tôi rút ra một điều: người bình thường <span class="text-white font-semibold">không cần biết kỹ thuật</span> vẫn tự dựng được trợ lý AI riêng - miễn đi đúng thứ tự. Triết lý của tôi gọn trong bốn chữ: <span class="text-gold-grad font-bold">dạy thực tâm, học thực chiến.</span>
+          </p>
+          <div class="mt-6 grid grid-cols-3 gap-3 max-w-md">
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3 text-center">
+              <div class="text-gold font-extrabold text-xl">8 năm</div>
+              <div class="text-[11px] text-blue-100/60 mt-1">trong nghề</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3 text-center">
+              <div class="text-gold font-extrabold text-xl">1000+</div>
+              <div class="text-[11px] text-blue-100/60 mt-1">học viên</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3 text-center">
+              <div class="text-gold font-extrabold text-xl">100+</div>
+              <div class="text-[11px] text-blue-100/60 mt-1">doanh nghiệp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORY (BEFORE-AFTER) ===================== -->
+<section class="relative py-20 dotgrid">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="kicker text-xs font-semibold uppercase">Một câu chuyện có thật</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">Vẫn là chị ấy, vẫn cái shop ấy - chỉ buổi tối là khác</h2>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="glass rounded-2xl p-7 reveal">
+        <div class="inline-flex items-center gap-2 text-red-300/90 font-semibold text-sm uppercase tracking-wide mb-3">
+          <span class="h-2 w-2 rounded-full bg-red-400"></span> Trước
+        </div>
+        <p class="text-blue-100/80">
+          Một chị học viên làm kế toán, tối về kiêm đăng bài cho shop của gia đình. Mỗi ngày chị mất <span class="text-white font-semibold">hai, ba tiếng</span> chỉ để trả lời những tin nhắn hỏi giống hệt nhau rồi cố nặn thêm một bài đăng. Chị thử ChatGPT, nhưng nó trả ra toàn chữ chung chung, “không ra giọng của shop mình”, nên chị bỏ, quay về làm tay.
+        </p>
+      </div>
+      <div class="glass rounded-2xl p-7 reveal" style="border-color:rgba(255,196,46,0.35)">
+        <div class="inline-flex items-center gap-2 text-gold font-semibold text-sm uppercase tracking-wide mb-3">
+          <span class="h-2 w-2 rounded-full bg-gold"></span> Sau
+        </div>
+        <p class="text-blue-100/85">
+          Chị ngồi xuống một lần, “kể” cho AI nghe mình là ai, shop bán gì, thích nói kiểu gì - rồi đóng gói thành một trợ lý riêng. Từ đó mỗi lần cần bài đăng hay câu trả lời, chị chỉ mở trợ lý ra, nói một câu là có ngay bản nháp đúng giọng. Việc soạn bài và trả lời rút từ hai, ba tiếng <span class="text-white font-semibold">xuống còn vài chục phút.</span>
+        </p>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-blue-100/70 reveal">Cái thay đổi lớn nhất không phải chị biết thêm một công cụ - mà là chị thôi làm mọi thứ bằng tay.</p>
+  </div>
+</section>
+
+<!-- ===================== BENEFITS ===================== -->
+<section id="loiich" class="relative py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="kicker text-xs font-semibold uppercase">Học xong bạn cầm được gì</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">Không phải lý thuyết - là năng lực thật</h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-12 w-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Ra lệnh chuẩn, đúng ngay lần đầu</h3>
+        <p class="text-sm text-blue-100/70">Biết viết câu lệnh rõ ràng để nhận đúng thứ mình cần - hết cảnh sửa tới sửa lui cả buổi.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-12 w-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 8V5M9 13h.01M15 13h.01" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Một trợ lý AI của riêng bạn</h3>
+        <p class="text-sm text-blue-100/70">Tự dựng ít nhất một trợ lý thuộc nằm lòng công việc, sản phẩm và giọng văn của bạn.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-12 w-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><path d="M4 5h11v15H6a2 2 0 01-2-2V5z"/><path d="M15 5h5v13a2 2 0 01-2 2h-3" /></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Kho câu lệnh dùng lại mãi</h3>
+        <p class="text-sm text-blue-100/70">Mở ra là dùng cho từng đầu việc hay lặp - không bao giờ phải gõ lại từ con số không.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-12 w-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0116 0" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">“Đưa chính mình lên AI”</h3>
+        <p class="text-sm text-blue-100/70">Nó nhớ bạn là ai, làm gì, cần gì - phục vụ đúng người đúng việc, không chung chung.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-12 w-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Lấy lại vài giờ mỗi ngày</h3>
+        <p class="text-sm text-blue-100/70">Giao việc vặt cho trợ lý, dành thời gian cho việc quan trọng hơn, cho khách, cho gia đình.</p>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="h-12 w-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-bold text-white mb-2">Tự tin làm chủ công cụ</h3>
+        <p class="text-sm text-blue-100/70">Thôi cảm giác mù mờ, e dè - trở thành người sai khiến AI làm việc cho mình.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CURRICULUM (3 BUỔI) ===================== -->
+<section id="lotrinh" class="relative py-20 dotgrid">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="noidung" class="text-center max-w-3xl mx-auto reveal">
+      <span class="kicker text-xs font-semibold uppercase">Lộ trình khóa học</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">3 buổi - từ con số 0 đến trợ lý hoàn chỉnh</h2>
+      <p class="mt-4 text-blue-100/75 text-lg">Khóa học online, cầm tay chỉ việc, dạy người chưa biết gì về AI tự dựng một trợ lý cá nhân từ ChatGPT.</p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-3 gap-6">
+      <div class="glass rounded-2xl p-7 reveal">
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-black text-gold-grad leading-none">01</span>
+          <span class="text-xs text-blue-100/60 uppercase tracking-wider">Buổi 1</span>
+        </div>
+        <h3 class="mt-4 text-xl font-bold text-white">Số hóa &amp; Project</h3>
+        <p class="mt-1 text-sm text-cyanx/80">Làm việc hằng ngày với AI</p>
+        <ul class="mt-4 space-y-2 text-sm text-blue-100/75">
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Đưa mình &amp; công việc lên AI, lập “bộ nhớ riêng” để nó hiểu bạn</li>
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Lập &amp; triển khai kế hoạch trong ngày với AI</li>
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Xuất tài liệu, tạo ảnh, đóng gói kết quả cuối ngày</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-7 reveal">
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-black text-gold-grad leading-none">02</span>
+          <span class="text-xs text-blue-100/60 uppercase tracking-wider">Buổi 2</span>
+        </div>
+        <h3 class="mt-4 text-xl font-bold text-white">Làm chủ Prompt</h3>
+        <p class="mt-1 text-sm text-cyanx/80">Câu lệnh chuẩn &amp; kho dùng lại</p>
+        <ul class="mt-4 space-y-2 text-sm text-blue-100/75">
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Công thức câu lệnh chuẩn 5 yếu tố, ra việc tốt ngay</li>
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Tối ưu prompt &amp; soi đúng giọng văn của bạn</li>
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Xây kho câu lệnh &amp; chuỗi câu lệnh cá nhân dùng lại</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-7 reveal" style="border-color:rgba(255,196,46,0.30)">
+        <div class="flex items-center justify-between">
+          <span class="text-5xl font-black text-gold-grad leading-none">03</span>
+          <span class="text-xs text-blue-100/60 uppercase tracking-wider">Buổi 3</span>
+        </div>
+        <h3 class="mt-4 text-xl font-bold text-white">SOP &amp; Trợ lý hoàn chỉnh</h3>
+        <p class="mt-1 text-sm text-cyanx/80">Đóng gói thành trợ lý chạy đúng ý</p>
+        <ul class="mt-4 space-y-2 text-sm text-blue-100/75">
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Biến quy trình thành SOP cho AI làm theo</li>
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Đóng gói tiêu chuẩn thành một trợ lý hoàn chỉnh</li>
+          <li class="flex gap-2"><span class="text-gold mt-0.5">✦</span> Bảng tự chấm điểm để trợ lý ngày càng tốt hơn</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KHÔNG phải gì -->
+    <div class="mt-8 glass rounded-2xl p-6 sm:p-7 reveal">
+      <h4 class="font-bold text-white mb-3">Để bạn khỏi hiểu lầm - khóa này <span class="text-gold-grad">không phải</span> cái gì:</h4>
+      <div class="grid sm:grid-cols-3 gap-4 text-sm text-blue-100/75">
+        <p class="flex gap-2"><span class="text-red-300">✕</span> Không phải khóa lý thuyết nghe cho sang rồi cất tủ.</p>
+        <p class="flex gap-2"><span class="text-red-300">✕</span> Không phải vài “mẹo lệnh thần thánh” xài hôm nay mai quên.</p>
+        <p class="flex gap-2"><span class="text-red-300">✕</span> Không nặng kỹ thuật, không một dòng lập trình. Đây là khóa nền - làm vững phần gốc trước.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICE / VALUE STACK ===================== -->
+<section id="hocphi" class="relative py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="kicker text-xs font-semibold uppercase">Học phí &amp; ưu đãi</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">Một lần đầu tư nhẹ - dùng được mãi về sau</h2>
+      <p class="mt-4 text-blue-100/75">Chỉ cần khóa giúp bạn tự soạn nội dung &amp; trả lời khách nhanh hơn, nó đã tự hoàn vốn trong vài tuần đầu.</p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-5 gap-6 items-start">
+      <!-- value list -->
+      <div class="lg:col-span-3 glass rounded-2xl p-7 reveal">
+        <h3 class="font-bold text-white mb-4">Vào học, bạn nhận trọn:</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 text-gold">✓</span>
+            <span class="text-blue-100/85"><span class="text-white font-semibold">Khóa Huấn luyện Trợ lý AI cá nhân</span> - trọn bộ 3 buổi thực hành, cầm tay chỉ việc</span>
+          </li>
+          <li class="flex items-start justify-between gap-3">
+            <span class="flex items-start gap-3"><span class="mt-0.5 text-gold">✓</span><span class="text-blue-100/85">Kho câu lệnh mẫu dựng sẵn theo từng đầu việc - copy chỉnh là dùng</span></span>
+            <span class="shrink-0 text-[11px] text-blue-100/50 border border-white/10 rounded px-2 py-0.5">[giá trị ____đ]</span>
+          </li>
+          <li class="flex items-start justify-between gap-3">
+            <span class="flex items-start gap-3"><span class="mt-0.5 text-gold">✓</span><span class="text-blue-100/85">Bộ trợ lý AI mẫu theo một số nghề phổ biến - sửa lại thành của bạn</span></span>
+            <span class="shrink-0 text-[11px] text-blue-100/50 border border-white/10 rounded px-2 py-0.5">[giá trị ____đ]</span>
+          </li>
+          <li class="flex items-start justify-between gap-3">
+            <span class="flex items-start gap-3"><span class="mt-0.5 text-gold">✓</span><span class="text-blue-100/85">Bộ mẫu tài liệu chuẩn &amp; bảng tự chấm điểm trợ lý</span></span>
+            <span class="shrink-0 text-[11px] text-blue-100/50 border border-white/10 rounded px-2 py-0.5">[giá trị ____đ]</span>
+          </li>
+          <li class="flex items-start justify-between gap-3">
+            <span class="flex items-start gap-3"><span class="mt-0.5 text-gold">✓</span><span class="text-blue-100/85">Vào nhóm học viên hỏi đáp - vướng đâu có người gỡ đó</span></span>
+            <span class="shrink-0 text-[11px] text-blue-100/50 border border-white/10 rounded px-2 py-0.5">[giá trị ____đ]</span>
+          </li>
+        </ul>
+        <div class="mt-5 rounded-xl bg-gold/10 border border-gold/25 p-4 text-sm text-blue-50">
+          Ưu đãi: tặng trọn bộ quà thực hành cho người đăng ký trước <span class="font-semibold text-gold">[ngày/tháng/năm]</span>. Qua mốc đó, khóa vẫn còn, học phí vẫn vậy, nhưng bộ quà này khép lại.
+        </div>
+      </div>
+
+      <!-- price card -->
+      <div class="lg:col-span-2 glass glow-ring rounded-2xl p-7 text-center reveal">
+        <p class="text-sm text-blue-100/70 uppercase tracking-wider">Học phí trọn khóa</p>
+        <div class="mt-2 text-4xl sm:text-5xl font-black text-gold-grad whitespace-nowrap">1.868.000đ</div>
+        <p class="mt-2 text-sm text-blue-100/65">Khóa nền · học online · học mãi về sau</p>
+
+        <a href="#dangky" class="btn-gold mt-6 inline-flex w-full items-center justify-center rounded-xl px-6 py-4 text-lg font-extrabold">
+          ĐĂNG KÝ NGAY
+        </a>
+        <p class="mt-3 text-xs text-blue-100/60">Điền thông tin dưới 1 phút · nhận tài khoản học ngay sau thanh toán</p>
+
+        <div class="mt-5 flex items-center justify-center gap-2 text-sm text-cyanx/90">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Cam kết hoàn tiền nếu không dùng được
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FORM ĐĂNG KÝ ===================== -->
+<style>
+  .reg-field{width:100%;padding:13px 15px;border-radius:12px;background:rgba(255,255,255,0.06);
+    border:1.5px solid rgba(120,170,255,0.25);color:#EAF1FF;font-family:inherit;font-size:1rem;transition:.15s;}
+  .reg-field::placeholder{color:rgba(219,234,254,0.45);}
+  .reg-field:focus{outline:none;border-color:#46C2F5;box-shadow:0 0 0 3px rgba(70,194,245,0.18);background:rgba(255,255,255,0.09);}
+  .reg-label{display:block;font-size:.9rem;font-weight:600;color:#DCE8FF;margin:14px 0 6px;}
+  .reg-label .req{color:#FCA5A5;}
+  .reg-hint{font-size:.78rem;color:rgba(219,234,254,0.55);margin-top:5px;}
+  .reg-err{display:none;color:#FCA5A5;font-size:.85rem;margin-top:10px;}
+  textarea.reg-field{resize:vertical;min-height:64px;}
+</style>
+<section id="dangky" class="relative py-20">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass glow-ring rounded-3xl p-6 sm:p-10 reveal">
+      <div class="text-center">
+        <span class="kicker text-xs font-semibold uppercase">Đăng ký giữ suất</span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">Điền thông tin để giữ suất</h2>
+        <p class="mt-3 text-blue-100/75">
+          Khai giảng gần nhất: <span class="text-gold font-semibold" id="f_kg">…</span>
+          · Học phí <span class="text-gold font-semibold" id="f_gia">1.868.000đ</span>
+        </p>
+      </div>
+
+      <form id="regForm" class="mt-8" novalidate>
+        <label class="reg-label">Họ và tên <span class="req">*</span></label>
+        <input class="reg-field" type="text" id="f_hoten" required placeholder="Nguyễn Văn A" autocomplete="name">
+
+        <label class="reg-label">Email <span class="req">*</span></label>
+        <input class="reg-field" type="email" id="f_email" required placeholder="email@cua-ban.com" autocomplete="email">
+
+        <label class="reg-label">Số điện thoại / Zalo <span class="req">*</span></label>
+        <input class="reg-field" type="tel" id="f_sdt" required placeholder="09xx xxx xxx" inputmode="tel" autocomplete="tel">
+
+        <label class="reg-label">Thông tin xuất hóa đơn (nếu cần)</label>
+        <textarea class="reg-field" id="f_hoadon" placeholder="Tên công ty — Mã số thuế — Địa chỉ (để trống nếu không cần)"></textarea>
+        <div class="reg-hint">Bỏ trống nếu bạn không cần hóa đơn VAT.</div>
+
+        <div class="reg-err" id="f_err">Vui lòng điền đủ Họ tên, Email và Số điện thoại.</div>
+
+        <button type="submit" id="f_btn" class="btn-gold mt-6 inline-flex w-full items-center justify-center rounded-xl px-6 py-4 text-lg font-extrabold">
+          ĐĂNG KÝ &amp; CHUYỂN SANG THANH TOÁN →
+        </button>
+        <p class="mt-3 text-center text-xs text-blue-100/60">🔒 Thông tin của bạn được bảo mật, chỉ dùng để xử lý đăng ký.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GUARANTEE ===================== -->
+<section class="relative py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="glass rounded-3xl p-8 sm:p-10 text-center reveal" style="border-color:rgba(255,196,46,0.30)">
+      <div class="mx-auto h-16 w-16 rounded-2xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-5">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFC42E" stroke-width="2"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Bạn không gánh một chút rủi ro nào</h2>
+      <p class="mt-4 text-blue-100/80 max-w-2xl mx-auto">
+        Cứ vào học, cứ làm theo. Nếu học hết nghiêm túc mà bạn thấy <span class="text-white font-semibold">không dựng được trợ lý nào dùng được</span> cho việc của mình, bạn nhắn cho đội ngũ - tôi hoàn lại tiền. Toàn bộ rủi ro nằm ở phía tôi, không phải phía bạn.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="relative py-20 dotgrid">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <span class="kicker text-xs font-semibold uppercase">Học viên nói gì</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">Họ từng đứng đúng chỗ bạn đang đứng</h2>
+      <p class="mt-3 text-sm text-blue-100/55">[Phần mẫu - anh Sơn thay bằng cảm nhận thật: tên, ảnh, nghề, con số trước–sau.]</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="text-gold text-2xl leading-none mb-3">“</div>
+        <p class="text-blue-100/85 text-sm">Trước đây tối nào cũng mất 2–3 tiếng trả lời khách và nặn bài đăng. Giờ có trợ lý riêng, mình làm xong trong vài chục phút.</p>
+        <div class="mt-5 flex items-center gap-3">
+          <div class="h-11 w-11 rounded-full bg-navy-800 border border-cyanx/30 flex items-center justify-center text-sm font-bold text-cyanx/90">A</div>
+          <div><p class="font-semibold text-white text-sm">[Họ tên học viên 1]</p><p class="text-xs text-blue-100/60">[Chủ shop / người đi làm]</p></div>
+        </div>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="text-gold text-2xl leading-none mb-3">“</div>
+        <p class="text-blue-100/85 text-sm">Mình làm nội dung mỗi ngày. Có kho câu lệnh và trợ lý riêng, tốc độ ra bài tăng gấp nhiều lần mà chất lượng đều hơn.</p>
+        <div class="mt-5 flex items-center gap-3">
+          <div class="h-11 w-11 rounded-full bg-navy-800 border border-cyanx/30 flex items-center justify-center text-sm font-bold text-cyanx/90">B</div>
+          <div><p class="font-semibold text-white text-sm">[Họ tên học viên 2]</p><p class="text-xs text-blue-100/60">[Người làm marketing]</p></div>
+        </div>
+      </div>
+      <div class="glass rounded-2xl p-6 reveal">
+        <div class="text-gold text-2xl leading-none mb-3">“</div>
+        <p class="text-blue-100/85 text-sm">Mình tự nhận “mù công nghệ”, vậy mà học xong vẫn tự dựng được trợ lý của riêng mình. Hóa ra không khó như mình nghĩ.</p>
+        <div class="mt-5 flex items-center gap-3">
+          <div class="h-11 w-11 rounded-full bg-navy-800 border border-cyanx/30 flex items-center justify-center text-sm font-bold text-cyanx/90">C</div>
+          <div><p class="font-semibold text-white text-sm">[Họ tên học viên 3]</p><p class="text-xs text-blue-100/60">[Người tay ngang]</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="relative py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center reveal">
+      <span class="kicker text-xs font-semibold uppercase">Còn băn khoăn?</span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white">Trả lời thẳng từng câu</h2>
+    </div>
+
+    <div class="mt-10 space-y-4">
+      <details class="faq glass rounded-2xl p-5 reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-semibold text-white">“Tôi bận lắm, lấy đâu thời gian mà học?”</span>
+          <span class="faq-plus text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-blue-100/75">Chính vì bận nên bạn mới cần nó. Khóa chỉ 3 buổi, học online, xem trên điện thoại lúc nào rảnh. Mục đích của khóa là lấy lại thời gian: bỏ vài buổi để mỗi ngày sau đó tiết kiệm hàng giờ.</p>
+      </details>
+      <details class="faq glass rounded-2xl p-5 reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-semibold text-white">“Tôi không rành công nghệ, sợ không theo kịp.”</span>
+          <span class="faq-plus text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-blue-100/75">Khóa dạy từ con số 0, không một dòng lập trình, không thuật ngữ rối rắm. Mỗi buổi đều có ví dụ làm mẫu để bạn làm theo từng bước. Nhắn được tin, gọi được video cho người thân là bạn học được khóa này.</p>
+      </details>
+      <details class="faq glass rounded-2xl p-5 reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-semibold text-white">“ChatGPT miễn phí, cần gì phải học?”</span>
+          <span class="faq-plus text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-blue-100/75">Công cụ thì miễn phí, nhưng biết có công cụ và biến nó thành một trợ lý làm việc thật là hai chuyện khác xa nhau. Cái bạn trả tiền ở đây là một cách làm đúng, đi tắt qua hàng tháng trời thử-và-sai.</p>
+      </details>
+      <details class="faq glass rounded-2xl p-5 reveal">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-semibold text-white">“Ngành của tôi đặc thù, áp vào được không?”</span>
+          <span class="faq-plus text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-blue-100/75">Được. Bạn không học một công thức cứng, mà học cách tự dựng trợ lý riêng theo đúng công việc, đúng sản phẩm của mình - dù bạn bán hàng, làm dịch vụ, văn phòng hay nội dung đều “may đo” được.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="relative py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-3xl p-8 sm:p-12 text-center overflow-hidden reveal" style="background:linear-gradient(180deg, rgba(30,91,214,0.30), rgba(8,27,74,0.5)); border:1px solid rgba(70,194,245,0.3)">
+      <div class="pointer-events-none absolute -top-20 left-1/2 -translate-x-1/2 w-[420px] h-[420px] rounded-full" style="background:radial-gradient(circle, rgba(255,196,46,0.16), rgba(255,196,46,0) 60%)"></div>
+      <div class="relative">
+        <h2 class="text-3xl sm:text-4xl font-black text-white uppercase leading-tight">Giờ là lúc của bạn</h2>
+        <p class="mt-4 text-blue-100/85 max-w-2xl mx-auto">
+          Đừng để thêm một ngày nữa trôi qua với cảnh sáng mở máy lại gõ lại từ đầu. Một trợ lý AI của riêng bạn - hiểu bạn, làm giúp bạn mỗi ngày - chỉ cách bạn đúng một quyết định.
+        </p>
+        <a href="#dangky" class="btn-gold mt-8 inline-flex items-center justify-center rounded-xl px-10 py-4 text-lg font-extrabold">
+          GIỮ SUẤT NGAY - 1.868.000đ
+        </a>
+        <p class="mt-4 text-sm text-blue-100/70">Bộ quà thực hành đóng lại sau <span class="text-gold font-semibold">[ngày/tháng/năm]</span> · Cam kết hoàn tiền nếu không dùng được.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative border-t border-white/10 py-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.2L21 10l-6.6 1.8L12 18l-2.4-6.2L3 10l6.6-1.8L12 2z" fill="#FFC42E"/></svg>
+          <span class="font-extrabold text-white">LÊ THANH SƠN</span>
+        </div>
+        <p class="mt-3 text-sm text-blue-100/65">Đào tạo doanh nghiệp &amp; cá nhân ứng dụng AI thực chiến để tăng năng suất và tăng trưởng.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-3 text-sm uppercase tracking-wider">Khóa học</h4>
+        <ul class="space-y-2 text-sm text-blue-100/65">
+          <li><a href="#noidung" class="hover:text-white transition">Học gì trong khóa</a></li>
+          <li><a href="#lotrinh" class="hover:text-white transition">Lộ trình 3 buổi</a></li>
+          <li><a href="#hocphi" class="hover:text-white transition">Học phí &amp; ưu đãi</a></li>
+          <li><a href="#faq" class="hover:text-white transition">Câu hỏi thường gặp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-3 text-sm uppercase tracking-wider">Liên hệ</h4>
+        <ul class="space-y-2 text-sm text-blue-100/65">
+          <li>Hotline / Zalo: <span class="text-white">[số điện thoại]</span></li>
+          <li>Fanpage: <span class="text-white">[link Fanpage]</span></li>
+          <li>Đăng ký học: <a href="#dangky" class="text-gold hover:underline">[link đăng ký]</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/10 text-center text-xs text-blue-100/50">
+      © 2026 Lê Thanh Sơn - Hệ sinh thái đào tạo AI. Bảo lưu mọi quyền.
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MOBILE STICKY CTA ===================== -->
+<div class="sm:hidden fixed bottom-0 inset-x-0 z-50 p-3 bg-navy-900/90 backdrop-blur border-t border-white/10">
+  <a href="#dangky" class="btn-gold flex items-center justify-center rounded-xl px-6 py-3.5 text-base font-extrabold">Đăng ký ngay - 1.868.000đ</a>
+</div>
+
+<script>
+  // Nav solid on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('nav-solid', window.scrollY > 24);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-in'));
+  }
+
+  // Hero particle network
+  (function () {
+    const canvas = document.getElementById('heroCanvas');
+    if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ctx = canvas.getContext('2d');
+    let w, h, pts, raf;
+    const DPR = Math.min(window.devicePixelRatio || 1, 2);
+    function resize() {
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = w * DPR; canvas.height = h * DPR; ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      const count = Math.min(70, Math.floor(w / 18));
+      pts = Array.from({ length: count }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35
+      }));
+    }
+    function tick() {
+      ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < pts.length; i++) {
+        const p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        for (let j = i + 1; j < pts.length; j++) {
+          const q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = Math.hypot(dx, dy);
+          if (d < 130) {
+            ctx.strokeStyle = 'rgba(70,194,245,' + (0.16 * (1 - d / 130)) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+          }
+        }
+        ctx.fillStyle = 'rgba(120,190,255,0.7)';
+        ctx.beginPath(); ctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2); ctx.fill();
+      }
+      raf = requestAnimationFrame(tick);
+    }
+    resize(); tick();
+    window.addEventListener('resize', () => { cancelAnimationFrame(raf); resize(); tick(); });
+  })();
+</script>
+
+<!-- ===== Xử lý form đăng ký (dùng config.js cùng thư mục) ===== -->
+<script src="config.js"></script>
+<script>
+  (function(){
+    var C = window.CONFIG || {};
+    var kg = document.getElementById('f_kg'); if (kg && C.KHAI_GIANG) kg.textContent = C.KHAI_GIANG;
+    var gi = document.getElementById('f_gia'); if (gi && C.GIA_HIEN_THI) gi.textContent = C.GIA_HIEN_THI;
+
+    function maDon(){
+      var d = new Date();
+      var ymd = String(d.getFullYear()).slice(2) + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+      var rnd = Math.random().toString(36).slice(2,6).toUpperCase();
+      return (C.MA_DON_PREFIX || 'TLAI') + '-' + ymd + '-' + rnd;
+    }
+
+    var form = document.getElementById('regForm');
+    if(!form) return;
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var ho_ten = document.getElementById('f_hoten').value.trim();
+      var email  = document.getElementById('f_email').value.trim();
+      var sdt    = document.getElementById('f_sdt').value.trim();
+      var hoadon = document.getElementById('f_hoadon').value.trim();
+      if(!ho_ten || !email || !sdt){ document.getElementById('f_err').style.display='block'; return; }
+
+      var btn = document.getElementById('f_btn');
+      btn.disabled = true; btn.textContent = 'Đang xử lý…';
+
+      var ma_don = maDon();
+      var payload = {
+        event: "dang_ky",
+        ma_don: ma_don, khoa: C.TEN_KHOA || "Huấn luyện Trợ lý AI cá nhân",
+        ho_ten: ho_ten, email: email, sdt: sdt,
+        xuat_hoa_don: hoadon,
+        so_tien: C.GIA || 1868000,
+        thoi_gian: new Date().toISOString()
+      };
+      try{
+        await fetch(C.WEBHOOK, { method:'POST', mode:'no-cors',
+          headers:{'Content-Type':'text/plain;charset=utf-8'},
+          body: JSON.stringify(payload) });
+      }catch(err){ /* no-cors: bỏ qua, vẫn chuyển trang */ }
+
+      var q = new URLSearchParams({ ma_don: ma_don, ho_ten: ho_ten, email: email, sdt: sdt });
+      window.location.href = 'cam-on.html?' + q.toString();
+    });
+  })();
+</script>
+</body>
+</html>
