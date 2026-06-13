@@ -9,12 +9,12 @@ window.CONFIG = {
 
   /* --- Tên & giá khóa --- */
   TEN_KHOA: "Huấn luyện Trợ lý AI cá nhân",
-  PHU_DE: "Biến ChatGPT thành nhân sự AI làm việc thật cho bạn — chỉ trong 3 buổi.",
+  PHU_DE: "Biến ChatGPT thành trợ lý AI riêng làm việc cho bạn, chỉ trong 3 buổi.",
   GIA: 1868000,                       // số tiền (dùng cho QR, KHÔNG có dấu chấm)
   GIA_HIEN_THI: "1.868.000đ",         // chữ hiển thị
 
   /* --- Lịch khai giảng (đổi ở đây) --- */
-  KHAI_GIANG: "12 – 13 – 14/06/2026",
+  KHAI_GIANG: "Thứ Sáu, 19/06/2026",
 
   /* --- Webhook Make (nhận đăng ký + xác nhận chuyển khoản) --- */
   WEBHOOK: "https://hook.eu2.make.com/lcmej5j2os9y13sedk11daev97pyxoq3",
