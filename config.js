@@ -44,7 +44,7 @@ window.CONFIG = {
   TONG_GIA_TRI: "≈ 8.984.000đ",
 
   /* --- Liên hệ hỗ trợ (hiện ở trang cảm ơn) --- */
-  HOTLINE: "",                        // để trống nếu chưa có; ví dụ "0900 000 000"
+  HOTLINE: "0343928094",                        // để trống nếu chưa có; ví dụ "0900 000 000"
 
   /* --- Màu thương hiệu (ít khi đổi) --- */
   MAU_DAU: "#03377d",
